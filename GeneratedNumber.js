@@ -9,36 +9,39 @@ const styles = StyleSheet.create({
   },
   indexColumn: {
     width: '10%',
-    textAlign: 'center',
     borderColor: '#d0d0d0',
     borderWidth: 1,
+    margin: 1,
   },
   primaryColumn: {
     width: '60%',
-    textAlign: 'center',
     borderColor: '#d0d0d0',
     borderWidth: 1,
+    margin: 1,
   },
   secondaryColumn: {
     width: '30%',
-    textAlign: 'center',
     borderColor: '#d0d0d0',
     borderWidth: 1,
+    margin: 1,
   },
   index: {
     color: 'blue',
     fontWeight: 'bold',
     fontSize: 20,
+    textAlign: 'center',
   },
   primary: {
     color: 'blue',
     fontWeight: 'bold',
     fontSize: 20,
+    textAlign: 'center',
   },
   secondary: {
     color: 'blue',
     fontWeight: 'bold',
     fontSize: 20,
+    textAlign: 'center',
   },
 });
 

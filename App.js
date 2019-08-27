@@ -17,9 +17,10 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import GeneratedNumber from './GeneratedNumber';
+import Header from './Header';
 
 const GeneratedNumbers = props => {
   const numbers = props.numbers;
