@@ -1,13 +1,14 @@
 import React from 'react';
-import {Text, StyleSheet, ImageBackground} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Text, StyleSheet, ImageBackground } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const Header = () => (
   <ImageBackground
     accessibilityRole={'image'}
-    source={require('./logo.png')}
+    source={require('../assets/logo.png')}
     style={styles.background}
-    imageStyle={styles.logo}>
+    imageStyle={styles.logo}
+  >
     <Text style={styles.text}>Number Generator</Text>
   </ImageBackground>
 );

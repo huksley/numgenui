@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 const styles = StyleSheet.create({
   number: {
@@ -57,9 +57,7 @@ class GeneratedNumber extends React.Component {
           <Text style={styles.index}>{this.props.index || 1}</Text>
         </View>
         <View style={styles.primaryColumn}>
-          <Text style={styles.primary}>
-            {this.props.primary && this.props.primary.join(', ')}
-          </Text>
+          <Text style={styles.primary}>{this.props.primary && this.props.primary.join(', ')}</Text>
         </View>
         <View style={styles.secondaryColumn}>
           <Text style={styles.secondary}>

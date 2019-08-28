@@ -1,12 +1,7 @@
-/**
- * @format
- */
-
 import 'react-native';
 import React from 'react';
-import App from '../App';
+import HomeScreen from './HomeScreen';
 
-// Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
 global.fetch = jest.fn(
@@ -23,9 +18,9 @@ global.fetch = jest.fn(
           });
         },
       });
-    }),
+    })
 );
 
 it('renders correctly', () => {
-  renderer.create(<App />);
+  renderer.create(<HomeScreen />);
 });
