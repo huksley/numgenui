@@ -195,6 +195,24 @@ android {
     }
 }
 
+/** 
+ * need to remove once library updates to androidx
+ * https://github.com/kmagiera/react-native-reanimated/issues/374
+ */
+preBuild.doFirst {
+    ant.replaceregexp(match: 'android.support.annotation.NonNull;', replace: 'androidx.annotation.NonNull;', flags: 'g', byline: true) {
+        fileset(dir: '../../node_modules/react-native-reanimated/android/src/main/java/com/swmansion/reanimated/transitions/', includes: '*.java')
+    }
+    
+    ant.replaceregexp(match: 'android.support.annotation.Nullable;', replace: 'androidx.annotation.Nullable;', flags: 'g', byline: true) {
+        fileset(dir: '../../node_modules/react-native-reanimated/android/src/main/java/com/swmansion/reanimated/transitions/', includes: '*.java')
+    }
+
+    ant.replaceregexp(match: 'android.support.transition', replace: 'androidx.transition', flags: 'g', byline: true) {
+        fileset(dir: '../../node_modules/react-native-reanimated/android/src/main/java/com/swmansion/reanimated/transitions/', includes: '*.java')
+    }
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
@@ -215,4 +233,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); 
+applyNativeModulesAppBuildGradle(project)

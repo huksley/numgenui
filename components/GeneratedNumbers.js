@@ -17,6 +17,6 @@ const GeneratedNumbers = props => {
     fragments.push(el);
   }
   return fragments;
-}
+};
 
 export default GeneratedNumbers;

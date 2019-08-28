@@ -6,7 +6,7 @@ import HomeScreen from './components/HomeScreen';
 class OptionsScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View>
         <Text>Options Screen</Text>
       </View>
     );
@@ -25,12 +25,12 @@ const AppNavigator = createStackNavigator(
   {
     initialRouteName: 'Home',
   }
-); 
+);
 
 const AppContainer = createAppContainer(AppNavigator);
 
- export default class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return <AppContainer />;
-  } 
+  }
 }
