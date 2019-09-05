@@ -4,6 +4,10 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from './components/HomeScreen';
 
 class OptionsScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Options',
+  };
+
   render() {
     return (
       <View>
@@ -24,6 +28,16 @@ const AppNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'Home',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+      headerRight: <Text>⚙ </Text>,
+    },
   }
 );
 

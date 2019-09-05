@@ -15,6 +15,19 @@ const styles = StyleSheet.create({
   body: {
     backgroundColor: Colors.white,
   },
+  buttonContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  button: {
+    margin: 40,
+    padding: 10,
+    borderColor: 'black',
+    borderWidth: 1,
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
@@ -44,6 +57,10 @@ const styles = StyleSheet.create({
 });
 
 class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Home',
+  };
+
   HomeScreen() {
     this.setState({
       numbers: [],
@@ -84,12 +101,19 @@ class HomeScreen extends React.Component {
           <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
             <Header />
             <View style={styles.body}>
-              <View style={styles.sectionContainer}>
+              <View style={styles.buttonContainer}>
                 <Button
+                  style={styles.button}
                   onPress={() => {
                     this.reloadNumber();
                   }}
                   title="More numbers"
+                />
+                <Button
+                  style={styles.button}
+                  color="gray"
+                  onPress={() => this.props.navigation.navigate('Options')}
+                  title="Options"
                 />
               </View>
               <View style={styles.sectionContainer}>
